@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design - Easy Tutorials</title>
+    <link rel="stylesheet" href={% static '/css/frontend.css' %}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <!-- <a href="index.html"><img src="images/logo.png" alt=""></a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/start">LOGIN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Login Here</h1>
+    </section>
+
+    <section class="campus">
+        <div class="row">
+            <div class="campus-col">
+                <img src="{% static 'images/studentlogin.jpg' %}">
+                <div class="layer">
+                    <h3><a style="text-decoration: none;" href="/userlogin/login">STUDENT</a></h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{% static 'images/stafflogin.jpg' %}">
+                <div class="layer">
+                    <h3><a style="text-decoration: none;" href="/userlogin/login">STAFF</a></h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{% static 'images/adminlogin.png' %}">
+                <div class="layer">
+                    <h3><a style="text-decoration: none;" href="/admin">ADMIN</a></h3>
+                </div>
+            </div>
+        </div>
+</section>
+  
+    
+<!-- -----footer ------  -->
+
+<section class="footer">
+    <p>Made with <i class="fa fa-heart-o">THE DEVELOPERS</i></p>
+</section>
+
+
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        } 
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        } 
+    </script>
+</body>
+</html>

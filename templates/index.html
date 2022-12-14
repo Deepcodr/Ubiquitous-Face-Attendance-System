@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubiquitous Face Attendance System</title>
+    <link rel="stylesheet" href={% static '/css/frontend.css' %}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <!-- <a href="index.html"><img src="" alt=""></a> -->
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/start">LOGIN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1 >Ubiquitous Face Attendance System</h1>
+            <h3>A face attendance system that marks student attendance automatically through web application
+            </h3>
+        </div>
+    </section>
+
+ <!-- Facities -->
+
+<section class="facilities">
+    <h1>Features</h1>
+    <p>A Multiple Feature Rich Application</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img s src="{% static 'images/face2.jpg' %}">
+            <h3>Extreme Fast & Accurate</h3>
+            <p>Our free custom facial recognition is powered by unique biometric data to make sure that staff must be physically present at the clocking station. Without any special equipment, our facial recognition solution turns a standard Android tablet/smartphone into a cost-effective clocking station.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="{% static 'images/faceGIF.gif' %}">
+            <h3>Accurate Algorithm Based On API</h3>
+            <p>face-api is a JavaScript library created by Vincent Mühler., to detect faces via browser. It is built over tensorflow.js core API. It supports Face Detection, Face Recognition, Face Expression, Age, and Gender Detection.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="{% static 'images/facer.jpg' %}">
+            <h3>Real-time face detection</h3>
+            <p>Live and real time tracking of facial data providing accurate results</p>
+        </div>
+        
+        
+    </div>
+</section>
+
+<section class="cta">
+    <h1>Login Here</h1>
+    <a href="/start" class="hero-btn">LOGIN</a>
+</section>
+
+<!-- -----footer ------  -->
+
+<section class="footer">
+    <p>Made with <i class="fa fa-heart-o">THE DEVELOPERS</i></p>
+</section>
+
+</body>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    } 
+
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    } 
+</script>
+</html>
